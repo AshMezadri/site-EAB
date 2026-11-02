@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&display=swap");
+@import url("https://googleapis.com");
+
 * {
   margin: 0;
   padding: 0;
@@ -6,44 +7,92 @@
   font-family: "Poppins", sans-serif;
   font-weight: 600;
 }
+
 img {
   border-radius: 10px;
 }
+
 body {
   display: flex;
+  flex-direction: column; 
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   background-color: rgb(255, 220, 225);
+  padding: 20px;
 }
 
-.wrapper {
-  padding: 25px;
+/* menu superior */
+.menu-topo {
+  width: 550px; 
+  height: 70px;
+  background: #fff;
   border-radius: 15px;
-  background: #f8f8f8;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  padding: 0 25px;
+  margin-bottom: 25px; 
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.cards,
-.card,
-.view,
+
+#score {
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
 .home {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+
+.home img {
+  height: 35px;
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.home img:hover {
+  transform: scale(1.15); 
+}
+
+/* caixa branca */
+.wrapper {
+  padding: 20px;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.cards,
+.card,
+.view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 .cards {
-  height: 400px;
-  width: 400px;
+  height: 550px;
+  width: 550px;
   flex-wrap: wrap;
   justify-content: space-between;
+  list-style: none;
 }
+
 .cards .card {
   cursor: pointer;
   position: relative;
-  perspective: 800px;
+  perspective: 1000px;
   transform-style: preserve-3d;
-  height: calc(100% / 4 - 10px);
-  width: calc(100% / 4 - 10px);
+  height: calc(100% / 4 - 15px);
+  width: calc(100% / 4 - 15px);
 }
 
 .card .view {
@@ -55,30 +104,31 @@ body {
   background: #fff;
   pointer-events: none;
   backface-visibility: hidden;
-  box-shadow: 0 4px 13px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 13px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s linear;
 }
-#score {
-  font-size: 20px;
-  padding-bottom: 20px;
-}
+
 .card .front-view span {
   color: rgb(253, 130, 149);
-  font-size: 30px;
+  font-size: 55px;
 }
+
 .card .back-view {
   transform: rotateY(-180deg);
 }
+
+
 .card .back-view img {
-  max-width: 90px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
+
 .card.flip .front-view {
   transform: rotateY(180deg);
 }
+
 .card.flip .back-view {
   transform: rotateY(0);
-}
-.home {
-  padding-top: 20px;
-  padding-bottom: 10px;
 }

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acervo BT21</title>
+  <link rel="stylesheet" href="https://googleapis.com">
+  <style>
+    /* Estilos Gerais (Baseados no seu menu original) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: rgb(255, 220, 225);
+    }
+
+    .container {
+      text-align: center;
+      padding: 25px;
+      border-radius: 15px;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 90%;
+    }
+
+     h1 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    /* Grade que organiza os itens do acervo */
+    .acervo-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+      gap: 15px; /* Espaço entre as fotos */
+      margin-bottom: 20px;
+    }
+
+     /* Quadrado de cada personagem */
+    .acervo-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #fdf2f4;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 13px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Ajuste da imagem */
+    .acervo-item img {
+      width: 75px;
+      height: 75px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 5px;
+    }
+
+    /* Nome do personagem embaixo da foto */
+    .acervo-item span {
+      font-size: 12px;
+      color: rgb(253, 130, 149);
+    }
+
+    /* Botão de Voltar */
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 125px;
+      height: 40px;
+      padding: 10px;
+      background: rgb(253, 130, 149);
+      color: #fff;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #ff4444;
+    }
+
+     /* Responsividade para celular */
+    @media (max-width: 450px) {
+      .acervo-grid {
+        grid-template-columns: repeat(2, 1fr); /* Vira 2 colunas no celular */
+      }
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Acervo BT21</h1>
+    <p>Conheça os personagens do jogo!</p>
+
+    <div class="acervo-grid">
+      <div class="acervo-item">
+        <img src="./res/img-1.jpg" alt="Personagem 1">
+        <span>Tata</span>
+      </div>
+      <div class="acervo-item">
+        <img src="./res/img-2.jpg" alt="Personagem 2">
+        <span>Chimmy</span>
+      </div>
+      <div class="acervo-item">
+        <img src="./res/img-3.jpg" alt="Personagem 3">
+        <span>Cooky</span>
+      </div>
+      <div class="acervo-item">
+        <img src="./res/img-4.jpg" alt="Personagem 4">
+        <span>RJ</span>
+      </div>
+        <div class="acervo-item">
+        <img src="./res/img-5.jpg" alt="Personagem 5">
+        <span>Koya</span>
+      </div>
+      <div class="acervo-item">
+        <img src="./res/img-6.jpg" alt="Personagem 6">
+        <span>Mang</span>
+      </div>
+      <div class="acervo-item">
+        <img src="./res/img-7.jpg" alt="Personagem 7">
+        <span>Shooky</span>
+      </div>
+      <div class="acervo-item">
+        <img src="./res/img-8.jpg" alt="Personagem 8">
+        <span>Van</span>
+      </div>
+    </div>
+
+    <!-- Altere o destino aqui se o seu arquivo inicial tiver outro nome -->
+    <button onclick="window.location.href='enter.html'">Home</button>
+  </div>
+
+</body>
+</html>

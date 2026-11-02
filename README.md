@@ -1,4 +1,4 @@
-# Jogo Da Memória BT21
+# Futuro jogo disciplina EAB
 
 Testando como fazer um jogo da memória 
 (só teste, baseado em outros projetos)

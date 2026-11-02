@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Início</title>
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Bem-vinde ao meu <br> Jogo da Memória</h1>
+      <div class="buttons">
+        <div class="enter">
+          <button onclick="enterGame()">Jogar</button>
+        </div>
+        <div class="creditos">
+          <button onclick="showCredits()">Créditos</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function enterGame() {
+        window.location.href = "index.html";
+      }
+
+      function showCredits() {
+        window.location.href = "creditos.html";
+      }
+    </script>
+  </body>
+</html>

@@ -19,74 +19,88 @@
       </div>
     </div>
 
-    <!-- TABULEIRO DO JOGO (Fica totalmente limpo no meio) -->
     <div class="wrapper">
       <ul class="cards">
         <li class="card">
           <div class="view front-view"><span class="material-icons">?</span></div>
-          <div class="view back-view"><img src="./res/img-1.jpg" alt="card-img" /></div>
+          <div class="view back-view"><img src="./res/teste-1.png" alt="card-img" /></div>
         </li>
         <li class="card">
           <div class="view front-view"><span class="material-icons">?</span></div>
-          <div class="view back-view"><img src="./res/img-2.jpg" alt="card-img" /></div>
+          <div class="view back-view"><img src="./res/teste-2.png" alt="card-img" /></div>
         </li>
         <li class="card">
           <div class="view front-view"><span class="material-icons">?</span></div>
-          <div class="view back-view"><img src="./res/img-3.jpg" alt="card-img" /></div>
+          <div class="view back-view"><img src="./res/teste-3.png" alt="card-img" /></div>
         </li>
         <li class="card">
           <div class="view front-view"><span class="material-icons">?</span></div>
-          <div class="view back-view"><img src="./res/img-4.jpg" alt="card-img" /></div>
+          <div class="view back-view"><img src="./res/teste-4.png" alt="card-img" /></div>
         </li>
         <li class="card">
           <div class="view front-view"><span class="material-icons">?</span></div>
-          <div class="view back-view"><img src="./res/img-5.jpg" alt="card-img" /></div>
+          <div class="view back-view"><img src="./res/teste-5.png" alt="card-img" /></div>
         </li>
         <li class="card">
           <div class="view front-view"><span class="material-icons">?</span></div>
-          <div class="view back-view"><img src="./res/img-6.jpg" alt="card-img" /></div>
+          <div class="view back-view"><img src="./res/teste-6.png" alt="card-img" /></div>
         </li>
         <li class="card">
           <div class="view front-view"><span class="material-icons">?</span></div>
-          <div class="view back-view"><img src="./res/img-7.jpg" alt="card-img" /></div>
+          <div class="view back-view"><img src="./res/teste-7.png" alt="card-img" /></div>
         </li>
         <li class="card">
           <div class="view front-view"><span class="material-icons">?</span></div>
-          <div class="view back-view"><img src="./res/img-8.jpg" alt="card-img" /></div>
+          <div class="view back-view"><img src="./res/teste-8.png" alt="card-img" /></div>
         </li>
         <li class="card">
           <div class="view front-view"><span class="material-icons">?</span></div>
-          <div class="view back-view"><img src="./res/img-1.jpg" alt="card-img" /></div>
+          <div class="view back-view"><img src="./res/teste-9.png" alt="card-img" /></div>
         </li>
         <li class="card">
           <div class="view front-view"><span class="material-icons">?</span></div>
-          <div class="view back-view"><img src="./res/img-2.jpg" alt="card-img" /></div>
+          <div class="view back-view"><img src="./res/teste-1.png" alt="card-img" /></div>
         </li>
         <li class="card">
           <div class="view front-view"><span class="material-icons">?</span></div>
-          <div class="view back-view"><img src="./res/img-3.jpg" alt="card-img" /></div>
+          <div class="view back-view"><img src="./res/teste-2.png" alt="card-img" /></div>
         </li>
         <li class="card">
           <div class="view front-view"><span class="material-icons">?</span></div>
-          <div class="view back-view"><img src="./res/img-4.jpg" alt="card-img" /></div>
+          <div class="view back-view"><img src="./res/teste-3.png" alt="card-img" /></div>
         </li>
         <li class="card">
           <div class="view front-view"><span class="material-icons">?</span></div>
-          <div class="view back-view"><img src="./res/img-5.jpg" alt="card-img" /></div>
+          <div class="view back-view"><img src="./res/teste-4.png" alt="card-img" /></div>
         </li>
         <li class="card">
           <div class="view front-view"><span class="material-icons">?</span></div>
-          <div class="view back-view"><img src="./res/img-6.jpg" alt="card-img" /></div>
+          <div class="view back-view"><img src="./res/teste-5.png" alt="card-img" /></div>
         </li>
         <li class="card">
           <div class="view front-view"><span class="material-icons">?</span></div>
-          <div class="view back-view"><img src="./res/img-7.jpg" alt="card-img" /></div>
+          <div class="view back-view"><img src="./res/teste-6.png" alt="card-img" /></div>
         </li>
         <li class="card">
           <div class="view front-view"><span class="material-icons">?</span></div>
-          <div class="view back-view"><img src="./res/img-8.jpg" alt="card-img" /></div>
+          <div class="view back-view"><img src="./res/teste-7.png" alt="card-img" /></div>
+        </li>
+        <li class="card">
+          <div class="view front-view"><span class="material-icons">?</span></div>
+          <div class="view back-view"><img src="./res/teste-8.png" alt="card-img" /></div>
+        </li>
+        <li class="card">
+          <div class="view front-view"><span class="material-icons">?</span></div>
+          <div class="view back-view"><img src="./res/teste-9.png" alt="card-img" /></div>
         </li>
       </ul>
+    </div>
+
+    <div id="modal-zoom" onclick="fecharZoom()" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; align-items: center; justify-content: center;">
+    <div style="background: white; padding: 20px; border-radius: 20px; text-align: center; position: relative; max-width: 90%; max-height: 90%;">
+    <img id="img-zoom" src="" alt="Carta Ampliada" style="max-width: 320px; height: auto; max-height: 70vh; border-radius: 15px; object-fit: contain; display: block; margin: 0 auto;">
+    <p style="margin-top: 15px; font-size: 18px; color: #333;">Clique em qualquer lugar para fechar</p>
+      </div>
     </div>
 
     <script src="script.js"></script>

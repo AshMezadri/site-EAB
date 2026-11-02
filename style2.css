@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&display=swap");
+@import url("https://googleapis.com");
 
 * {
   margin: 0;
@@ -18,19 +18,29 @@ body {
 
 .container {
   text-align: center;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 45px 40px; /* Aumentado para dar mais elegância ao menu */
+  border-radius: 20px; /* Bordas mais suaves combinando com o jogo */
   background: #fff;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  max-width: 440px; /* Caixa compacta e imponente na tela */
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 30px; 
   color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; 
 }
 
 button {
@@ -38,19 +48,22 @@ button {
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 125px;
-  height: 40px;
+  width: 220px;  /* Era 125px - Ficou mais largo e confortável para clique */
+  height: 54px;  /* Era 40px  - Ficou mais alto e robusto */
   padding: 10px;
-  margin: 10px;
+  margin: 10px 0; /* Margem vertical equilibrada */
   background: rgb(253, 130, 149);
   color: #fff;
-  font-size: 16px;
+  font-size: 18px; /* Texto maior e muito mais legível */
   border: none;
-  border-radius: 5px;
+  border-radius: 10px; /* Combina com o arredondamento dos cards do jogo */
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.2s ease;
 }
+
 
 button:hover {
   background: #ff4444;
+  transform: translateY(-3px); /* Efeito dinâmico de flutuar ao passar o mouse */
+  box-shadow: 0 8px 18px rgba(255, 68, 68, 0.15); /* Sombra suave vermelha */
 }

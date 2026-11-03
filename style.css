@@ -18,13 +18,13 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: rgb(255, 220, 225);
+  background-color: rgb(167, 1, 26);
   padding: 20px;
 }
 
 .menu-topo {
   width: 100%;
-  max-width: 795px; /* Largura máxima calculada para alinhar certinho com as 8 colunas */
+  max-width: 795px; 
   height: 70px;
   background: #fff;
   border-radius: 15px;
@@ -60,7 +60,7 @@ body {
   transform: scale(1.15); 
 }
 
-/* caixa branca */
+
 .wrapper {
   padding: 20px;
   border-radius: 15px;
@@ -76,7 +76,6 @@ body {
   justify-content: center;
 }
 
-/* cartas */
 .cards {
   display: grid;
   grid-template-columns: repeat(6, 115px);  
@@ -114,7 +113,7 @@ body {
 }
 
 .card .front-view span {
-  color: rgb(253, 130, 149);
+  color: rgb(167, 1, 26);
   font-size: 55px;
 }
 
@@ -126,7 +125,7 @@ body {
 .card .back-view img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Corta pequenas sobras para a imagem não ficar amassada ou esticada */
+  object-fit: cover; 
   border-radius: 10px;
 }
 
@@ -139,12 +138,11 @@ body {
 }
 
 .cards .card.flip:hover {
-  transform: scale(1.80); /* Aumenta a carta em 18% do tamanho original */
-  z-index: 99;            /* Joga a carta para a camada da frente, evitando que ela fique atrás das vizinhas */
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Deixa a sombra mais realista ao flutuar */
+  transform: scale(1.20); /*zoom na carta*/
+  z-index: 99;           
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); 
 }
 
-/* Transição suave para o efeito não ser brusco */
 .cards .card {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -154,7 +152,6 @@ body {
     padding: 15px;
   }
 
-  /* No celular, o menu acompanha as bordas da tela com um respiro */
   .menu-topo {
     max-width: 100%;
     height: 60px;
@@ -170,10 +167,9 @@ body {
     height: 28px;
   }
 
-  /* Mágica do Mobile: Transforma o jogo em 2 colunas largas e 8 linhas verticais */
   .cards {
-    grid-template-columns: repeat(3, 100px); /* 2 colunas confortáveis para o polegar */
-    grid-template-rows: repeat(6, 1700px);    /* 8 linhas que se estendem para baixo */
+    grid-template-columns: repeat(3, 100px); 
+    grid-template-rows: repeat(6, 1700px);   
     gap: 12px;
     padding: 15px;
   }

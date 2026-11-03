@@ -13,20 +13,20 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: rgb(255, 220, 225);
+  background-color: rgb(167, 1, 26);
 }
 
 .container {
   text-align: center;
-  padding: 45px 40px; /* Aumentado para dar mais elegância ao menu */
-  border-radius: 20px; /* Bordas mais suaves combinando com o jogo */
+  padding: 45px 40px; 
+  border-radius: 20px; 
   background: #fff;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 440px; /* Caixa compacta e imponente na tela */
+  max-width: 440px; 
 }
 
 h1 {
@@ -48,15 +48,15 @@ button {
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 220px;  /* Era 125px - Ficou mais largo e confortável para clique */
-  height: 54px;  /* Era 40px  - Ficou mais alto e robusto */
+  width: 220px;  
+  height: 54px;  
   padding: 10px;
-  margin: 10px 0; /* Margem vertical equilibrada */
-  background: rgb(253, 130, 149);
+  margin: 10px 0; 
+  background: rgb(255, 153, 0);
   color: #fff;
-  font-size: 18px; /* Texto maior e muito mais legível */
+  font-size: 18px; 
   border: none;
-  border-radius: 10px; /* Combina com o arredondamento dos cards do jogo */
+  border-radius: 10px; 
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -64,6 +64,6 @@ button {
 
 button:hover {
   background: #ff4444;
-  transform: translateY(-3px); /* Efeito dinâmico de flutuar ao passar o mouse */
-  box-shadow: 0 8px 18px rgba(255, 68, 68, 0.15); /* Sombra suave vermelha */
+  transform: translateY(-3px); 
+  box-shadow: 0 8px 18px rgba(255, 68, 68, 0.15); 
 }

@@ -3,31 +3,40 @@ let matched = 0;
 let cardOne, cardTwo;
 let disableDeck = false;
 let score = 0;
+let modoLupaAtivo = false;
 
 function updateScore() {
   document.getElementById("score").textContent = "Pontuação: " + score;
 }
 
 function flipCard({ target: clickedCard }) {
-  
   let cardElement = clickedCard.closest('.card');
-  
-  // SE O MODO LUPA ESTIVER ATIVO: Mostra a imagem ampliada e interrompe o jogo
-  if (modoLupaAtivo && cardElement) {
-    let imgUrl = cardElement.querySelector(".back-view img").src;
-    abrirZoom(imgUrl);
-    return; // Impede que a carta conte na lógica do jogo da memória
-  }
-  
-  if (cardOne !== clickedCard && !disableDeck) {
-    clickedCard.classList.add("flip");
-    if (!cardOne) {
-      return (cardOne = clickedCard);
+  if (!cardElement || disableDeck) return;
+
+  if (modoLupaAtivo) {
+    if (cardElement.classList.contains("flip")) {
+      let imgUrl = cardElement.querySelector(".back-view img").src;
+      abrirZoom(imgUrl);
     }
-    cardTwo = clickedCard;
+    return; 
+  }
+
+  if (cardElement === cardOne) return;
+
+  if (!cardElement.classList.contains("flip")) {
+    cardElement.classList.add("flip");
+
+    if (!cardOne) {
+      cardOne = cardElement;
+      return;
+    }
+
+    cardTwo = cardElement;
     disableDeck = true;
+
     let cardOneImg = cardOne.querySelector(".back-view img").src,
       cardTwoImg = cardTwo.querySelector(".back-view img").src;
+
     matchCards(cardOneImg, cardTwoImg);
   }
 }
@@ -60,9 +69,6 @@ function matchCards(img1, img2) {
   }, 1200);
 }
 
-let modoLupaAtivo = false;
-
-// Função para ligar/desligar o modo acessibilidade
 function toggleModoLupa() {
   modoLupaAtivo = !modoLupaAtivo;
   const btn = document.getElementById("btn-lupa");
@@ -82,25 +88,31 @@ function abrirZoom(imgUrl) {
 
 // Fecha o pop-up
 function fecharZoom() {
-  document.getElementById("modal-zoom").style.style.display = "none";
+  document.getElementById("modal-zoom").style.display = "none";
 }
 
 function shuffleCard() {
   matched = 0;
   disableDeck = false;
   cardOne = cardTwo = "";
-  let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-  arr.sort(() => (Math.random() > 0.5 ? 1 : -1));
+
+  let arr = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9];
+
+  for (let i = arr.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+
+  cards = document.querySelectorAll(".card");
+
   cards.forEach((card, i) => {
-    card.classList.remove("flip");
+    card.classList.remove("flip", "shake");
     let imgTag = card.querySelector(".back-view img");
     imgTag.src = `./res/teste-${arr[i]}.png`;
+
+    card.removeEventListener("click", flipCard);
     card.addEventListener("click", flipCard);
   });
 }
 
 shuffleCard();
-
-cards.forEach((card) => {
-  card.addEventListener("click", flipCard);
-});

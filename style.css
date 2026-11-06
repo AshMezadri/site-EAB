@@ -14,7 +14,7 @@ img {
 
 body {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
@@ -24,22 +24,24 @@ body {
 
 .menu-topo {
   width: 100%;
-  max-width: 795px; 
+  max-width: 815px;
   height: 70px;
   background: #fff;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  padding: 0 25px;
+  padding: 0 20px;
   margin-bottom: 25px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-sizing: border-box;
 }
 
 #score {
-  font-size: 24px;
+  font-size: 22px;
   color: #333;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .home {
@@ -57,15 +59,17 @@ body {
 }
 
 .home img:hover {
-  transform: scale(1.15); 
+  transform: scale(1.15);
 }
 
 
 .wrapper {
-  padding: 20px;
+  padding: 25px;
   border-radius: 15px;
   background: #fff;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: fit-content;
+  height: fit-content;
 }
 
 .cards,
@@ -78,13 +82,9 @@ body {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(6, 115px);  
-  grid-template-rows: repeat(3, 195px);   
-  gap: 15px;                               
-  background: #fff;                        
-  padding: 25px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  grid-template-columns: repeat(6, 115px);
+  grid-template-rows: repeat(3, 195px);
+  gap: 15px;
   list-style: none;
   width: fit-content;
   height: fit-content;
@@ -121,11 +121,10 @@ body {
   transform: rotateY(-180deg);
 }
 
-
 .card .back-view img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
   border-radius: 10px;
 }
 
@@ -138,9 +137,10 @@ body {
 }
 
 .cards .card.flip:hover {
-  transform: scale(1.20); /*zoom na carta*/
-  z-index: 99;           
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); 
+  transform: scale(1.20);
+  /*zoom na carta*/
+  z-index: 99;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
 .cards .card {
@@ -153,12 +153,12 @@ body {
   }
 
   .menu-topo {
-    max-width: 100%;
+    max-width: 354px;
     height: 60px;
     padding: 0 15px;
     margin-bottom: 20px;
   }
-  
+
   #score {
     font-size: 20px;
   }
@@ -167,10 +167,15 @@ body {
     height: 28px;
   }
 
-  .cards {
-    grid-template-columns: repeat(3, 100px); 
-    grid-template-rows: repeat(6, 1700px);   
-    gap: 12px;
+  .wrapper {
+    width: 354px;
     padding: 15px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(6, 170px);
+    gap: 12px;
+    padding: 0;
   }
 }

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Acervo Personalidades</title>
+  <title>Acervo BT21</title>
   <link rel="stylesheet" href="https://googleapis.com">
   <style>
-
-* {
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -17,140 +17,210 @@
 
     body {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
       background-color: rgb(167, 1, 26);
+      padding: 20px;
     }
 
-    .container {
-      text-align: center;
-      padding: 45px 40px; 
-      border-radius: 20px;
+    .menu-topo {
+      width: 100%;
+      max-width: 425px;
+      height: 70px;
       background: #fff;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      padding: 0 25px;
+      margin-bottom: 25px;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      max-width: 100%;
+      justify-content: space-between;
     }
 
-     h1 {
-      font-size: 24px;
+    #titulo-acervo {
+      font-size: 20px;
       color: #333;
-      margin-bottom: 5px;
     }
 
-    p {
-      font-size: 14px;
-      color: #666;
-      margin-bottom: 15px;
+    #btn-lupa {
+      padding: 8px 12px;
+      font-size: 15px;
+      background: rgb(253, 130, 149);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.2s;
     }
 
     .acervo-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr); 
+      grid-template-columns: repeat(3, 115px);
+      grid-template-rows: repeat(3, 195px);
       gap: 15px;
-      margin-bottom: 20px;
+      background: #fff;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      margin-bottom: 25px;
     }
 
-     /* personagens */
     .acervo-item {
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: space-between;
       background: #fdf2f4;
       padding: 10px;
       border-radius: 10px;
       box-shadow: 0 4px 13px rgba(0, 0, 0, 0.05);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .acervo-item:hover {
+      transform: scale(1.05);
     }
 
     .acervo-item img {
-      width: 90px;
-      height: 90px;
+      width: 100%;
+      height: 140px;
       object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 5px;
+      border-radius: 8px;
     }
 
     .acervo-item span {
-      font-size: 12px;
-      color: rgb(167, 1, 26);
+      font-size: 14px;
+      color: rgb(253, 130, 149);
+      margin-top: 5px;
     }
 
-    button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 125px;
-      height: 40px;
-      padding: 10px;
-      background: rgb(167, 1, 26);
+    .btn-home {
+      width: 180px;
+      height: 52px;
+      background: rgb(253, 130, 149);
       color: #fff;
-      font-size: 16px;
+      font-size: 18px;
       border: none;
-      border-radius: 5px;
+      border-radius: 10px;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: all 0.2s ease;
     }
 
-    button:hover {
+    .btn-home:hover {
       background: #ff4444;
+      transform: translateY(-2px);
     }
 
     @media (max-width: 450px) {
+      .menu-topo {
+        max-width: 320px;
+      }
+
       .acervo-grid {
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(2, 130px);
+        grid-template-rows: auto;
+        gap: 12px;
+        padding: 24px;
       }
     }
   </style>
 </head>
+
 <body>
-    <div class="container">
-    <h1>Acervo Personalidades</h1>
-    <p>Conheça os personagens do jogo!</p>
 
-    <div class="acervo-grid">
-      <div class="acervo-item">
-        <img src="./res/teste-1.png" alt="Personagem 1">
-        <span>Tata</span>
-      </div>
-      <div class="acervo-item">
-        <img src="./res/teste-2.png" alt="Personagem 2">
-        <span>Chimmy</span>
-      </div>
-      <div class="acervo-item">
-        <img src="./res/teste-3.png" alt="Personagem 3">
-        <span>Cooky</span>
-      </div>
-      <div class="acervo-item">
-        <img src="./res/teste-4.png" alt="Personagem 4">
-        <span>RJ</span>
-      </div>
-        <div class="acervo-item">
-        <img src="./res/teste-5.png" alt="Personagem 5">
-        <span>Koya</span>
-      </div>
-      <div class="acervo-item">
-        <img src="./res/teste-6.png" alt="Personagem 6">
-        <span>Mang</span>
-      </div>
-      <div class="acervo-item">
-        <img src="./res/teste-7.png" alt="Personagem 7">
-        <span>Shooky</span>
-      </div>
-      <div class="acervo-item">
-        <img src="./res/teste-8.png" alt="Personagem 8">
-        <span>Van</span>
-      </div>
-      <div class="acervo-item">
-        <img src="./res/teste-9.png" alt="Personagem 9">
-        <span>Teste</span>
-      </div>
-    </div>
-
-    <button onclick="window.location.href='enter.html'">Home</button>
+  <div class="menu-topo">
+    <h1 id="titulo-acervo">Acervo Personalidades</h1>
+    <button id="btn-lupa" onclick="toggleModoLupa()">
+      Lupa: OFF
+    </button>
   </div>
 
+  <div class="acervo-grid">
+    <div class="acervo-item" onclick="verificarCliqueItem(this)">
+      <img src="./res/teste-1.png" alt="Personagem 1">
+      <span>Tata</span>
+    </div>
+    <div class="acervo-item" onclick="verificarCliqueItem(this)">
+      <img src="./res/teste-2.png" alt="Personagem 2">
+      <span>Chimmy</span>
+    </div>
+    <div class="acervo-item" onclick="verificarCliqueItem(this)">
+      <img src="./res/teste-3.png" alt="Personagem 3">
+      <span>Cooky</span>
+    </div>
+    <div class="acervo-item" onclick="verificarCliqueItem(this)">
+      <img src="./res/teste-4.png" alt="Personagem 4">
+      <span>RJ</span>
+    </div>
+    <div class="acervo-item" onclick="verificarCliqueItem(this)">
+      <img src="./res/teste-5.png" alt="Personagem 5">
+      <span>Koya</span>
+    </div>
+    <div class="acervo-item" onclick="verificarCliqueItem(this)">
+      <img src="./res/teste-6.png" alt="Personagem 6">
+      <span>Mang</span>
+    </div>
+    <div class="acervo-item" onclick="verificarCliqueItem(this)">
+      <img src="./res/teste-7.png" alt="Personagem 7">
+      <span>Shooky</span>
+    </div>
+    <div class="acervo-item" onclick="verificarCliqueItem(this)">
+      <img src="./res/teste-8.png" alt="Personagem 8">
+      <span>Van</span>
+    </div>
+    <div class="acervo-item" onclick="verificarCliqueItem(this)">
+      <img src="./res/teste-9.png" alt="Personagem 9">
+      <span>Personagem 9</span>
+    </div>
+  </div>
+
+  <button class="btn-home" onclick="window.location.href='enter.html'">Home</button>
+
+  <div id="modal-zoom" onclick="fecharZoom()"
+    style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; align-items: center; justify-content: center; cursor: pointer;">
+    <div
+      style="background: white; padding: 20px; border-radius: 20px; text-align: center; position: relative; max-width: 90%; max-height: 90%;">
+      <img id="img-zoom" src="" alt="Carta Ampliada"
+        style="max-width: 320px; height: auto; max-height: 70vh; border-radius: 15px; object-fit: contain; display: block; margin: 0 auto;">
+      <p id="texto-zoom" style="margin-top: 15px; font-size: 22px; font-weight: 700; color: #333;"></p>
+      <p style="margin-top: 5px; font-size: 14px; color: #666;">Clique em qualquer lugar para fechar</p>
+    </div>
+  </div>
+
+  <script>
+    let modoLupaAtivo = false;
+
+    function toggleModoLupa() {
+      modoLupaAtivo = !modoLupaAtivo;
+      const btn = document.getElementById("btn-lupa");
+      if (modoLupaAtivo) {
+        btn.textContent = "🔍 Lupa: ON";
+        btn.style.background = "#ff4444";
+      } else {
+        btn.textContent = "🔍 Lupa: OFF";
+        btn.style.background = "rgb(253, 130, 149)";
+      }
+    }
+
+    function verificarCliqueItem(elemento) {
+
+      if (modoLupaAtivo) {
+        let imgUrl = elemento.querySelector("img").src;
+        let nomePersonagem = elemento.querySelector("span").textContent;
+
+        document.getElementById("img-zoom").src = imgUrl;
+        document.getElementById("texto-zoom").textContent = nomePersonagem; // Mostra o nome gigante também!
+        document.getElementById("modal-zoom").style.display = "flex";
+      }
+    }
+
+    function fecharZoom() {
+      document.getElementById("modal-zoom").style.display = "none";
+    }
+  </script>
 </body>
+
 </html>

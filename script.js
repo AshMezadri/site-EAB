@@ -73,13 +73,14 @@ function toggleModoLupa() {
   modoLupaAtivo = !modoLupaAtivo;
   const btn = document.getElementById("btn-lupa");
   if (modoLupaAtivo) {
-    btn.textContent = "🔍 Modo Lupa: ON";
+    btn.textContent = "Lupa: ON";
     btn.style.background = "#ff4444";
   } else {
-    btn.textContent = "🔍 Modo Lupa: OFF";
-    btn.style.background = "rgb(253, 130, 149)";
+    btn.textContent = "Lupa: OFF";
+    btn.style.background = "rgb(167, 1, 26)";
   }
 }
+
 
 function abrirZoom(imgUrl) {
   document.getElementById("img-zoom").src = imgUrl;

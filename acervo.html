@@ -17,44 +17,7 @@
     </button>
   </div>
 
-  <div class="acervo-grid">
-    <div class="acervo-item" onclick="verificarCliqueItem(this)" data-bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse.">
-      <img src="./res/teste-1.png" alt="Personagem 1">
-      <span>Adélia Domingues</span>
-    </div>
-    <div class="acervo-item" onclick="verificarCliqueItem(this)" data-bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse.">
-      <img src="./res/teste-2.png" alt="Personagem 2">
-      <span>Alexandra Eliza Vieira Alencar</span>
-    </div>
-    <div class="acervo-item" onclick="verificarCliqueItem(this)" data-bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse.">
-      <img src="./res/teste-3.png" alt="Personagem 3">
-      <span>Antonieta de Barros</span>
-    </div>
-    <div class="acervo-item" onclick="verificarCliqueItem(this)" data-bio="Lorem ipsum dolor sit amet... (Cole aqui a biografia longa do personagem 4)">
-      <img src="./res/teste-4.png" alt="Personagem 4">
-      <span>Ildefonso Juvenal</span>
-    </div>
-    <div class="acervo-item" onclick="verificarCliqueItem(this)" data-bio="Lorem ipsum dolor sit amet... (Cole aqui a biografia longa do personagem 5)">
-      <img src="./res/teste-5.png" alt="Personagem 5">
-      <span>Luciana de Freitas Silveira</span>
-    </div>
-    <div class="acervo-item" onclick="verificarCliqueItem(this)" data-bio="Lorem ipsum dolor sit amet... (Cole aqui a biografia longa do personagem 6)">
-      <img src="./res/teste-6.png" alt="Personagem 6">
-      <span>Neide Maria Rosa</span>
-    </div>
-    <div class="acervo-item" onclick="verificarCliqueItem(this)" data-bio="Lorem ipsum dolor sit amet... (Cole aqui a biografia longa do personagem 7)">
-      <img src="./res/teste-7.png" alt="Personagem 7">
-      <span>Neli Góes Ribeiro</span>
-    </div>
-    <div class="acervo-item" onclick="verificarCliqueItem(this)" data-bio="Lorem ipsum dolor sit amet... (Cole aqui a biografia longa do personagem 8)">
-      <img src="./res/teste-8.png" alt="Personagem 8">
-      <span>Trajano Margarida</span>
-    </div>
-    <div class="acervo-item" onclick="verificarCliqueItem(this)" data-bio="Lorem ipsum dolor sit amet... (Cole aqui a biografia longa do personagem 9)">
-      <img src="./res/teste-9.png" alt="Personagem 9">
-      <span>William Conceição</span>
-    </div>
-  </div>
+<div class="acervo-grid" id="grade-acervo"></div>
 
   <button class="btn-home" onclick="window.location.href='enter.html'">Home</button>
 
@@ -67,38 +30,33 @@
     </div>
   </div>
 
+  <script src="script.js"></script>
+
   <script>
-    let modoLupaAtivo = false;
+    const grade = document.getElementById("grade-acervo");
 
-    function toggleModoLupa() {
-      modoLupaAtivo = !modoLupaAtivo;
-      const btn = document.getElementById("btn-lupa");
+    Object.keys(dadosPersonalidades).forEach((id) => {
+      const pessoa = dadosPersonalidades[id];
+      const item = document.createElement("div");
+      item.classList.add("acervo-item");
+      item.innerHTML = `
+        <img src="${pessoa.carta}" alt="${pessoa.nome}">
+        <span>${pessoa.nome}</span>
+      `;
+      item.onclick = () => abrirModalAcervo(id);
+      grade.appendChild(item);
+    });
+
+    function abrirModalAcervo(id) {
       if (modoLupaAtivo) {
-        btn.textContent = "Lupa: ON";
-        btn.style.background = "#ff4444";
-      } else {
-        btn.textContent = "Lupa: OFF";
-        btn.style.background = "rgb(167, 1, 26)";
-      }
-    }
-
-    function verificarCliqueItem(elemento) {
-      if (modoLupaAtivo) {
-        let imgUrl = elemento.querySelector("img").src;
-        let nomePersonagem = elemento.querySelector("span").textContent;
-        
-        let biografia = elemento.getAttribute("data-bio") || "Biografia não cadastrada para esta personalidade.";
-
-        document.getElementById("img-zoom").src = imgUrl;
-        document.getElementById("texto-zoom").textContent = nomePersonagem; 
-        document.getElementById("biografia-zoom").textContent = biografia; 
+        const pessoa = dadosPersonalidades[id];
+        document.getElementById("img-zoom").src = pessoa.carta;
+        document.getElementById("texto-zoom").textContent = pessoa.nome;
+        document.getElementById("biografia-zoom").textContent = pessoa.bio;
         document.getElementById("modal-zoom").style.display = "flex";
       }
     }
-
-    function fecharZoom() {
-      document.getElementById("modal-zoom").style.display = "none";
-    }
   </script>
+
 </body>
 </html>

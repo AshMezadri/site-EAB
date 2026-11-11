@@ -107,8 +107,19 @@
     <div style="background: white; padding: 25px; border-radius: 20px; text-align: center; position: relative; max-width: 420px; width: 100%; max-height: 85vh; overflow-y: auto; box-shadow: 0 10px 40px rgba(0,0,0,0.3); cursor: default;" onclick="event.stopPropagation()">
       <img id="img-zoom" src="" alt="Carta Ampliada" style="max-width: 140px; height: auto; border-radius: 12px; object-fit: contain; display: block; margin: 0 auto;">
       <p id="texto-zoom" style="margin-top: 15px; font-size: 24px; font-weight: 800; color: #333;"></p>
-      <p id="biografia-zoom" style="margin-top: 12px; font-size: 14px; font-weight: 500; color: #444; line-height: 1.5; text-align: justify; padding: 0 5px; font-family: system-ui, sans-serif;"></p>
-      
+      <div style="display: flex; justify-content: center; gap: 10px; margin-top: 10px;">
+        <button onclick="mudarTamanhoFonte(-2)" aria-label="Diminuir fonte"
+          style="padding: 4px 12px; background: #eee; color: #333; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; font-weight: 700; cursor: pointer;">
+          A-
+        </button>
+        <button onclick="mudarTamanhoFonte(2)" aria-label="Aumentar fonte"
+          style="padding: 4px 12px; background: #eee; color: #333; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; font-weight: 700; cursor: pointer;">
+          A+
+        </button>
+      </div>
+      <p id="biografia-zoom"
+        style="margin-top: 12px; font-size: 14px; font-weight: 500; color: #444; line-height: 1.5; text-align: justify; padding: 0 5px; font-family: system-ui, sans-serif;">
+      </p>
       <button id="btn-ouvir" onclick="lerBiografia()" style="margin-top: 15px; margin-right: 10px; padding: 8px 18px; background: rgb(255, 153, 0); color: white; border: none; border-radius: 6px; font-size: 14px; font-weight: 700; cursor: pointer;">
          Ouvir Texto
       </button>

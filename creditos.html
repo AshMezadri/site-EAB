@@ -1,103 +1,278 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Créditos</title>
+<html lang="pt-BR">
 
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&display=swap");
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./res/favicon.ico" type="image/x-icon">
+  <title>Créditos - Personalidades Negras</title>
+  <link href="https://googleapis.com" rel="stylesheet" />
 
-        * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Poppins", sans-serif;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
 
-        body {
-        display:flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        background-color: rgb(167, 1, 26);
-        }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: rgb(167, 1, 26);
+      padding: 20px;
+    }
 
-        .container {
-        text-align: center;
-        padding: 20px;
-        border-radius: 10px;
-        background: #fff;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        }
+    .header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
 
-        h1 {
-        font-size: 28px;
-        color: #333;
-        margin-bottom: 20px;
-        font-weight: 700;
-        }
+    .container {
+      background: #fff;
+      padding: 40px 35px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      max-width: 480px;
+      text-align: center;
+    }
 
-        p {
-        font-weight: 400;
-        }
+    .barra-acessibilidade {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
 
-        button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        width: 125px;
-        height: 40px;
-        padding: 10px;
-        margin: 10px;
-        background: rgb(253, 130, 149);
-        color: #fff;
-        font-size: 16px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background 0.3s;
-        }
+    .btn-fonte {
+      padding: 5px 14px;
+      background: #eee;
+      color: #333;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
 
-        button:hover {
-        background: #ff4444;
-        }
+    .btn-fonte:hover {
+      background: #e0e0e0;
+    }
 
-        hr {
-        margin: 20px auto;
-        border: 1px solid #ccc;
-        width: 50%;
-        }
+    .btn-audio {
+      padding: 5px 14px;
+      background: rgb(255, 153, 0);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
 
-    </style>
-  </head>
-  <body>
-      
-    <div class="container">
-      <h1>Créditos</h1>
-      <div class="texto">
-        <p>
-          Material desenvolvido para a matéria <br>
-          <strong>Estudos Afro Brasileiros 26.2</strong> <br>
-          <hr>
-          Inspirado no projeto de <br>
-          <strong><a href="https://www.codingnepalweb.com">CodingNepal.</a></strong><br>
-          <hr>
-          Desenvolvido por:<br>
-          <strong>Ash Armanini Mezadri</strong>
+    .btn-audio:hover {
+      background: #ff4444;
+    }
+
+    .descricao {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    .secao-creditos {
+      margin-bottom: 25px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+    }
+
+    .secao-creditos h1 {
+      font-size: 18px;
+      color: #222;
+      margin-bottom: 12px;
+      font-weight: 800;
+    }
+
+    .lista-integrantes {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .lista-integrantes li {
+      font-size: 15px;
+      color: #444;
+      font-weight: 500;
+    }
+
+    .detalhes-texto {
+      font-size: 15px;
+      color: #444;
+      line-height: 1.7;
+      font-weight: 500;
+    }
+
+    .detalhes-texto strong {
+      color: #222;
+      font-weight: 700;
+    }
+
+    .link-credito {
+      color: rgb(167, 1, 26);
+      text-decoration: none;
+      font-weight: 700;
+      border-bottom: 1px dashed rgb(167, 1, 26);
+      transition: color 0.2s;
+    }
+
+    .link-credito:hover {
+      color: rgb(255, 153, 0);
+      border-bottom-color: rgb(255, 153, 0);
+    }
+
+    .btn-home {
+      width: 200px;
+      height: 52px;
+      margin-top: 10px;
+      background: rgb(255, 153, 0);
+      color: #fff;
+      font-size: 18px;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-home:hover {
+      background: #ff4444;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 18px rgba(255, 68, 68, 0.2);
+    }
+
+    @media (max-width: 480px) {
+      .header h1 {
+        font-size: 24px;
+      }
+
+      .container {
+        padding: 25px 20px 30px 20px;
+      }
+
+      .secao-creditos h1 {
+        font-size: 18px;
+      }
+
+      .lista-integrantes li,
+      .detalhes-texto {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="barra-acessibilidade">
+      <button class="btn-fonte" onclick="mudarFonteCreditos(-2)" aria-label="Diminuir fonte">A-</button>
+      <button class="btn-fonte" onclick="mudarFonteCreditos(2)" aria-label="Aumentar fonte">A+</button>
+      <button class="btn-audio" id="btn-ouvir-creditos" onclick="lerCreditos()">🔊 Ouvir Texto</button>
+    </div>
+
+    <div id="conteudo-creditos">
+
+      <div class="secao-creditos">
+        <p class="detalhes-texto texto-ajustavel">
+          <strong>Disciplina:</strong> <br>
+          <strong>Turma:</strong> 2026<br>
+          <strong>Professora:</strong> <br>
+          <strong>Estagiária docente:</strong> 
         </p>
       </div>
-      <hr>
-      <div class="home">
-        <a href="enter.html">
-          <img src="./res/home.png" alt="Home" />
-        </a>
+
+      <div class="secao-creditos">
+        <h1>Equipe</h1>
+        <ul class="lista-integrantes">
+          <li class="texto-ajustavel">Ash Armanini Mezadri</li>
+          <li class="texto-ajustavel">Fernanda ...</li>
+          <li class="texto-ajustavel">Debora ...</li>
+          <li class="texto-ajustavel">Sah</li>
+          <li class="texto-ajustavel">Thiago</li>
+        </ul>
+      </div>
+
+      <div class="secao-creditos">
+        <h1>Referências e Código Base</h1>
+        <p class="detalhes-texto texto-ajustavel">
+          Estrutura base da mecânica do Jogo da Memória inspirada no tutorial de
+          <a href="https://codingnepalweb.com" target="_blank" rel="noopener noreferrer"
+            class="link-credito">CodingNepal</a>.
+        </p>
+      </div>
     </div>
-    </div>
-    
-  </body>
-  </html>
+
+    <button class="btn-home" onclick="voltarHome()">Voltar</button>
+  </div>
+
+  <script>
+    let tamanhoFonteCreditos = 15;
+    let falando = false;
+
+    function mudarFonteCreditos(alteracao) {
+      tamanhoFonteCreditos += alteracao;
+      if (tamanhoFonteCreditos < 13) tamanhoFonteCreditos = 13;
+      if (tamanhoFonteCreditos > 24) tamanhoFonteCreditos = 24;
+
+      const textos = document.querySelectorAll(".texto-ajustavel");
+      textos.forEach((el) => {
+        el.style.fontSize = `${tamanhoFonteCreditos}px`;
+      });
+    }
+
+    function lerCreditos() {
+      const btn = document.getElementById("btn-ouvir-creditos");
+
+      if (falando) {
+        window.speechSynthesis.cancel();
+        falando = false;
+        btn.textContent = "🔊 Ouvir Texto";
+        return;
+      }
+
+      window.speechSynthesis.cancel();
+      const textoCompleto = document.getElementById("conteudo-creditos").innerText;
+      const fala = new SpeechSynthesisUtterance(textoCompleto);
+      fala.lang = "pt-BR";
+
+      falando = true;
+      btn.textContent = "⏹️ Parar Áudio";
+
+      fala.onend = () => {
+        falando = false;
+        btn.textContent = "🔊 Ouvir Texto";
+      };
+
+      window.speechSynthesis.speak(fala);
+    }
+
+    function voltarHome() {
+      window.speechSynthesis.cancel();
+      window.location.href = "enter.html";
+    }
+  </script>
+
+</body>
+
+</html>

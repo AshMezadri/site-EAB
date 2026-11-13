@@ -6,14 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="./res/favicon.ico" type="image/x-icon">
   <title>Créditos - Personalidades Negras</title>
-  <link href="https://googleapis.com" rel="stylesheet" />
-
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
+      font-family: system-ui, sans-serif;
     }
 
     body {
@@ -31,13 +29,20 @@
       margin-bottom: 25px;
     }
 
+    .header h1 {
+      font-size: 30px;
+      color: #fff;
+      font-weight: 800;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
     .container {
       background: #fff;
-      padding: 40px 35px;
+      padding: 35px 40px;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
       width: 100%;
-      max-width: 480px;
+      max-width: 520px;
       text-align: center;
     }
 
@@ -47,31 +52,33 @@
       align-items: center;
       gap: 10px;
       margin-bottom: 25px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #f0f0f0;
     }
 
     .btn-fonte {
-      padding: 5px 14px;
-      background: #eee;
+      padding: 8px 18px;
+      background: #f5f5f5;
       color: #333;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 14px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
       font-weight: 700;
       cursor: pointer;
       transition: background 0.2s;
     }
 
     .btn-fonte:hover {
-      background: #e0e0e0;
+      background: #e8e8e8;
     }
 
     .btn-audio {
-      padding: 5px 14px;
+      padding: 8px 20px;
       background: rgb(255, 153, 0);
       color: #fff;
       border: none;
-      border-radius: 6px;
-      font-size: 14px;
+      border-radius: 8px;
+      font-size: 16px;
       font-weight: 700;
       cursor: pointer;
       transition: background 0.2s;
@@ -81,72 +88,85 @@
       background: #ff4444;
     }
 
-    .descricao {
+    .bloco-disciplina {
+      margin-bottom: 22px;
+    }
+
+    .titulo {
+      font-size: 17px;
+      color: #222;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .nomes-profs {
       font-size: 15px;
       color: #555;
-      line-height: 1.6;
-      margin-bottom: 20px;
       font-weight: 500;
     }
 
-    .secao-creditos {
-      margin-bottom: 25px;
-      padding-top: 20px;
-      border-top: 1px solid #eee;
+    .divisoria {
+      border: none;
+      height: 1px;
+      background: #ececec;
+      margin: 22px auto;
+      width: 85%;
     }
 
-    .secao-creditos h1 {
-      font-size: 18px;
-      color: #222;
-      margin-bottom: 12px;
-      font-weight: 800;
+    .bloco-equipe {
+      margin-bottom: 22px;
+    }
+
+    .titulo-equipe {
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #888;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 10px;
     }
 
     .lista-integrantes {
-      list-style: none;
       display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .lista-integrantes li {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
       font-size: 15px;
-      color: #444;
-      font-weight: 500;
-    }
-
-    .detalhes-texto {
-      font-size: 15px;
-      color: #444;
-      line-height: 1.7;
-      font-weight: 500;
-    }
-
-    .detalhes-texto strong {
       color: #222;
-      font-weight: 700;
+      font-weight: 600;
+      line-height: 1.6;
+    }
+
+    .separador-ponto {
+      color: #ccc;
+      user-select: none;
+    }
+
+    .bloco-jogo {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.5;
+      margin-bottom: 28px;
     }
 
     .link-credito {
       color: rgb(167, 1, 26);
       text-decoration: none;
       font-weight: 700;
-      border-bottom: 1px dashed rgb(167, 1, 26);
-      transition: color 0.2s;
     }
 
     .link-credito:hover {
-      color: rgb(255, 153, 0);
-      border-bottom-color: rgb(255, 153, 0);
+      text-decoration: underline;
     }
 
     .btn-home {
       width: 200px;
-      height: 52px;
-      margin-top: 10px;
+      height: 50px;
       background: rgb(255, 153, 0);
       color: #fff;
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 600;
       border: none;
       border-radius: 10px;
@@ -156,8 +176,8 @@
 
     .btn-home:hover {
       background: #ff4444;
-      transform: translateY(-3px);
-      box-shadow: 0 8px 18px rgba(255, 68, 68, 0.2);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(255, 68, 68, 0.2);
     }
 
     @media (max-width: 480px) {
@@ -169,12 +189,12 @@
         padding: 25px 20px 30px 20px;
       }
 
-      .secao-creditos h1 {
-        font-size: 18px;
+      .titulo-disciplina {
+        font-size: 16px;
       }
 
-      .lista-integrantes li,
-      .detalhes-texto {
+      .nomes-profs,
+      .lista-integrantes {
         font-size: 14px;
       }
     }
@@ -188,39 +208,42 @@
     <div class="barra-acessibilidade">
       <button class="btn-fonte" onclick="mudarFonteCreditos(-2)" aria-label="Diminuir fonte">A-</button>
       <button class="btn-fonte" onclick="mudarFonteCreditos(2)" aria-label="Aumentar fonte">A+</button>
-      <button class="btn-audio" id="btn-ouvir-creditos" onclick="lerCreditos()">🔊 Ouvir Texto</button>
+      <button class="btn-audio" id="btn-ouvir-creditos" onclick="lerCreditos()">Ouvir Texto</button>
     </div>
 
     <div id="conteudo-creditos">
 
-      <div class="secao-creditos">
-        <p class="detalhes-texto texto-ajustavel">
-          <strong>Disciplina:</strong> <br>
-          <strong>Turma:</strong> 2026<br>
-          <strong>Professora:</strong> <br>
-          <strong>Estagiária docente:</strong> 
-        </p>
+      <div class="bloco-disciplina">
+        <p class="titulo texto-ajustavel">Nome da Disciplina 2026.2</p>
+        <p class="nomes-profs texto-ajustavel">Nome da Professora - Nome da Estagiária</p>
       </div>
 
-      <div class="secao-creditos">
-        <h1>Equipe</h1>
-        <ul class="lista-integrantes">
-          <li class="texto-ajustavel">Ash Armanini Mezadri</li>
-          <li class="texto-ajustavel">Fernanda ...</li>
-          <li class="texto-ajustavel">Debora ...</li>
-          <li class="texto-ajustavel">Sah</li>
-          <li class="texto-ajustavel">Thiago</li>
-        </ul>
+      <hr class="divisoria" />
+
+      <div class="bloco-equipe">
+        <span class="titulo-equipe texto-ajustavel">Equipe</span>
+        <div class="lista-integrantes texto-ajustavel">
+          <span>Ash Armanini Mezadri</span>
+          <span class="separador-ponto">•</span>
+          <span>Fernanda ...</span>
+          <span class="separador-ponto">•</span>
+          <span>Debora ...</span>
+          <span class="separador-ponto">•</span>
+          <span>Sah</span>
+          <span class="separador-ponto">•</span>
+          <span>Thiago</span>
+        </div>
       </div>
 
-      <div class="secao-creditos">
-        <h1>Referências e Código Base</h1>
-        <p class="detalhes-texto texto-ajustavel">
-          Estrutura base da mecânica do Jogo da Memória inspirada no tutorial de
-          <a href="https://codingnepalweb.com" target="_blank" rel="noopener noreferrer"
+      <hr class="divisoria" />
+
+      <div class="bloco-jogo">
+        <p class="texto-ajustavel">
+          inspirado no projeto de <a href="https://codingnepalweb.com" target="_blank" rel="noopener noreferrer"
             class="link-credito">CodingNepal</a>.
         </p>
       </div>
+
     </div>
 
     <button class="btn-home" onclick="voltarHome()">Voltar</button>
@@ -247,7 +270,7 @@
       if (falando) {
         window.speechSynthesis.cancel();
         falando = false;
-        btn.textContent = "🔊 Ouvir Texto";
+        btn.textContent = "Ouvir Texto";
         return;
       }
 
@@ -257,11 +280,11 @@
       fala.lang = "pt-BR";
 
       falando = true;
-      btn.textContent = "⏹️ Parar Áudio";
+      btn.textContent = "Parar Áudio";
 
       fala.onend = () => {
         falando = false;
-        btn.textContent = "🔊 Ouvir Texto";
+        btn.textContent = "Ouvir Texto";
       };
 
       window.speechSynthesis.speak(fala);

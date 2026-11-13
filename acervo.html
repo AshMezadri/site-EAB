@@ -25,25 +25,31 @@
     <div class="modal-conteudo" onclick="event.stopPropagation()">
       <img id="img-zoom" src="" alt="Carta Ampliada">
       <p id="texto-zoom" style="margin-top: 15px; font-size: 24px; font-weight: 800; color: #333;"></p>
-      <div style="display: flex; justify-content: center; gap: 10px; margin-top: 10px;">
-        <button onclick="mudarTamanhoFonte(-2)" aria-label="Diminuir fonte"
-          style="padding: 4px 12px; background: #eee; color: #333; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; font-weight: 700; cursor: pointer;">
-          A-
-        </button>
-        <button onclick="mudarTamanhoFonte(2)" aria-label="Aumentar fonte"
-          style="padding: 4px 12px; background: #eee; color: #333; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; font-weight: 700; cursor: pointer;">
-          A+
-        </button>
-      </div>
-      <p id="biografia-zoom"
-        style="margin-top: 12px; font-size: 14px; font-weight: 500; color: #444; line-height: 1.5; text-align: justify; padding: 0 5px; font-family: system-ui, sans-serif;">
-      </p>
-      <button id="btn-ouvir" onclick="lerBiografia()"
-        style="margin-top: 15px; margin-right: 10px; padding: 8px 18px; background: rgb(255, 153, 0); color: white; border: none; border-radius: 6px; font-size: 14px; font-weight: 700; cursor: pointer;">
-        Ouvir Texto
-      </button>
 
-      <button class="btn-fechar-modal" onclick="fecharZoom()">Fechar</button>
+        <div style="display: flex; justify-content: center; gap: 12px; margin-top: 14px;">
+          <button onclick="mudarTamanhoFonte(-2)" aria-label="Diminuir fonte"
+            style="padding: 8px 18px; background: #eee; color: #333; border: 1px solid #ccc; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer;">
+            A-
+          </button>
+          <button onclick="mudarTamanhoFonte(2)" aria-label="Aumentar fonte"
+            style="padding: 8px 18px; background: #eee; color: #333; border: 1px solid #ccc; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer;">
+            A+
+          </button>
+        </div>
+
+        <p id="biografia-zoom"
+          style="margin-top: 14px; font-size: 14px; font-weight: 500; color: #444; line-height: 1.5; text-align: justify; padding: 0 5px; font-family: system-ui, sans-serif;">
+        </p>
+
+        <button id="btn-ouvir" onclick="lerBiografia()"
+          style="margin-top: 18px; margin-right: 10px; padding: 10px 22px; background: rgb(255, 153, 0); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer;">
+          Ouvir Texto
+        </button>
+
+        <button onclick="fecharZoom()"
+          style="margin-top: 18px; padding: 10px 24px; background: rgb(167, 1, 26); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer;">
+          Fechar
+        </button>
     </div>
   </div>
 

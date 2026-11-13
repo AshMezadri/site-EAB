@@ -10,37 +10,37 @@ const dadosPersonalidades = {
 
   1: {
     nome: "Adélia Domingues",
-    carta: "./res/teste-1.png",
+    carta: "./res/carta-1.png",
     bio: "Adélia Domingues é uma artesã e escritora gaúcha nascida em 1935, natural de Pinheiro Machado/RS e residente em Florianópolis desde 1996. Interrompeu seus estudos aos 14 anos, para trabalhar em uma fazenda e voltou a estudar apenas aos 60 anos de idade, na modalidade EJA (Educação de Jovens e Adultos) oferecida por meio do programa NETI-UNAPI (Núcleo de Estudos da Terceira Idade - Universidade Aberta para Pessoas Idosas) da UFSC. Em 2025, lançou seu primeiro livro “Construída em Retalhos” onde conta um pouco de sua biografia e incentiva as pessoas a buscarem conhecimento sempre, independente da idade. Atualmente, Adélia ministra oficinas de fuxico, frequenta aulas de teatro e ginástica e tem uma banca na feira de artesanato da Lagoa da Conceição."
   },
   2: {
     nome: "Alexandra Alencar",
-    carta: "./res/teste-2.png",
+    carta: "./res/carta-2.png",
     bio: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus fringilla lacus nec metus bibendum egestas iaculis massa nisl malesuada lacinia integer nunc posuere ut hendrerit semper vel class aptent taciti sociosqu ad litora torquent per conubia nostra inceptos himenaeos orci varius natoque penatibus et magnis dis parturient montes nascetur ridiculus mus donec rhoncus eros lobortis nulla molestie mattis scelerisque maximus eget fermentum odio phasellus non purus est efficitur laoreet mauris pharetra vestibulum fusce dictum risus blandit quis suspendisse aliquet nisi sodales consequat magna ante condimentum neque at luctus nibh finibus facilisis dapibus etiam interdum tortor ligula congue sollicitudin erat viverra ac tincidunt nam porta elementum a enim euismod quam justo lectus commodo augue arcu dignissim velit aliquam imperdiet mollis nullam volutpat porttitor ullamcorper rutrum gravida cras eleifend turpis fames primis vulputate ornare sagittis vehicula praesent dui felis venenatis ultrices proin libero feugiat tristique accumsan maecenas potenti ultricies habitant morbi senectus netus suscipit auctor curabitur facilisi."
   },
   3: {
     nome: "Antonieta de Barros",
-    carta: "./res/teste-3.png",
+    carta: "./res/carta-3.png",
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque porro quisquam est, qui dolorem ipsum quia dolor."
   },
   4: {
     nome: "Ildefonso Juvenal",
-    carta: "./res/teste-4.png",
+    carta: "./res/carta-4.png",
     bio: "Ildefonso Juvenal (1894-1965) foi um escritor, pesquisador, orador, militar e farmacêutico florianopolitano, primeiro homem negro a graduar-se em uma universidade em Santa Catarina, no curso de Farmácia, em 1924. Publicou obras de diversos gêneros literários, além de artigos para jornais e periódicos de Santa Catarina, Paraná, Rio Grande do Sul e São Paulo. Foi sócio do Instituto Histórico e Geográfico Catarinense; um dos fundadores do Centro Cívico e Recreativo José Boiteux, associação que lutava pela cidadania e contra a discriminação racial; membro correspondente do Centro de Letras do Paraná e da Academia Riograndense de Letras. A Lei 6.463, de 1984, instituiu a medalha de Mérito Intelectual 'Major Ildefonso Juvenal', para ser concedida ao 1º colocado no Curso de Aperfeiçoamento de Oficiais da Polícia Militar."
   },
   5: {
     nome: "Luciana de Freitas Silveira",
-    carta: "./res/teste-5.png",
+    carta: "./res/carta-5.png",
     bio: "Biografia da Personalidade 5."
   },
   6: {
     nome: "Neide Maria Rosa",
-    carta: "./res/teste-6.png",
+    carta: "./res/carta-6.png",
     bio: "Neide Maria Rosa (1936-1994), multiartista florianopolitana com destaque na MPB. Iniciou carreira musical aos 14 anos e interpretou diversos estilos. Seu repertório denuncia racismos, afirma a identidade negra e as vivências do morro. Na década de 60, manteve intenso contato com artistas de MPB, sendo premiada em festivais e cantando no Copacabana Palace (RJ). Primeira intérprete de “Rancho do Amor à Ilha”, oficializada como hino de Florianópolis. Gravou um único disco, “Eu Sou Assim”, em homenagem aos florianopolitanos. Faleceu em 1994, deixando um importante legado para a história da música catarinense. Em 2004, o G.R.E.S. Consulado escreveu um enredo exaltando sua trajetória. Em 2023, foi homenageada com a Medalha Cruz e Sousa, a maior honraria cultural de Santa Catarina."
   },
   7: {
     nome: "Neli Góes Ribeiro",
-    carta: "./res/teste-7.png",
+    carta: "./res/carta-7.png",
     bio: "Biografia da Personalidade 7."
   },
   8: {
@@ -50,7 +50,7 @@ const dadosPersonalidades = {
   },
   9: {
     nome: "William Conceição",
-    carta: "./res/teste-9.png",
+    carta: "./res/carta-8.png",
     bio: "Biografia da Personalidade 9."
   }
 };
@@ -168,7 +168,6 @@ function criarExplosao(cartaElemento) {
   }
 }
 
-
 function toggleModoLupa() {
   modoLupaAtivo = !modoLupaAtivo;
   const btn = document.getElementById("btn-lupa");
@@ -191,7 +190,6 @@ function abrirPopUpBiografia(id, imgUrl) {
 }
 
 function lerBiografia() {
-
   window.speechSynthesis.cancel();
 
   const nome = document.getElementById("texto-zoom").textContent;
@@ -205,14 +203,15 @@ function lerBiografia() {
 
   const btnOuvir = document.getElementById("btn-ouvir");
   if (btnOuvir) {
-    btnOuvir.textContent = "⏹️ Falando...";
+    btnOuvir.textContent = "Falando...";
     fala.onend = () => {
-      btnOuvir.textContent = "🔊 Ouvir Texto";
+      btnOuvir.textContent = "Ouvir Texto";
     };
   }
 
   window.speechSynthesis.speak(fala);
-} 
+}
+
 
 function mudarTamanhoFonte(alteracao) {
   const bioElemento = document.getElementById("biografia-zoom");
@@ -229,15 +228,15 @@ function mudarTamanhoFonte(alteracao) {
 function fecharZoom() {
   window.speechSynthesis.cancel();
   const btnOuvir = document.getElementById("btn-ouvir");
-  if (btnOuvir) btnOuvir.textContent = "🔊 Ouvir Texto";
-
+  if (btnOuvir) btnOuvir.textContent = "Ouvir Texto";
+  
   document.getElementById("modal-zoom").style.display = "none";
 }
 
 document.addEventListener("keydown", function (evento) {
   if (evento.key === "Escape") {
     const modal = document.getElementById("modal-zoom");
-    
+
     if (modal && modal.style.display === "flex") {
       fecharZoom();
     }
@@ -265,7 +264,7 @@ function shuffleCard() {
     card.setAttribute("data-id", numeroCarta);
 
     let imgTag = card.querySelector(".back-view img");
-    imgTag.src = `./res/teste-${numeroCarta}.png`;
+    imgTag.src = `./res/carta-${numeroCarta}.png`;
 
     card.removeEventListener("click", flipCard);
     card.addEventListener("click", flipCard);

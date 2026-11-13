@@ -83,7 +83,7 @@ body {
 .cards {
   display: grid;
   grid-template-columns: repeat(6, 115px);
-  grid-template-rows: repeat(3, 195px);
+  grid-template-rows: repeat(3, 165px);
   gap: 15px;
   list-style: none;
   width: fit-content;
@@ -213,7 +213,7 @@ body {
 
   .cards {
     grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(6, 170px);
+    grid-template-rows: repeat(6, 145px);
     gap: 12px;
     padding: 0;
   }

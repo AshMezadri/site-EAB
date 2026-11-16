@@ -1,10 +1,7 @@
-# Futuro jogo disciplina EAB
+# Personalidades Negras nas Encruzilhadas do Sul do Brasil
 
-Testando como fazer um jogo da memória 
-(só teste, baseado em outros projetos)
-
+Jogo da memória e acervo de personalidades negras do Sul do Brasil
 
 ## 🔗 Link
-[Site](https://ashmezadri.github.io/jogo-da-memoria-bt21/enter.html)
-
+[Site](https://ashmezadri.github.io/site-EAB/enter.html)
 

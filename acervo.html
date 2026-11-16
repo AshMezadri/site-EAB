@@ -19,39 +19,49 @@
 
   <div class="acervo-grid" id="grade-acervo"></div>
 
-  <button class="btn-home" onclick="window.location.href='enter.html'">Home</button>
+  <button class="btn-home" onclick="window.location.href='enter.html'">Voltar</button>
 
   <div id="modal-zoom" onclick="fecharZoom()">
+
     <div class="modal-conteudo" onclick="event.stopPropagation()">
-      <img id="img-zoom" src="" alt="Carta Ampliada">
+      <img id="img-zoom" src="" alt="Carta Ampliada" onclick="abrirLightbox(this.src)"
+        title="Clique para ampliar a foto"
+        style="max-width: 140px; height: auto; border-radius: 12px; object-fit: contain; display: block; margin: 0 auto; cursor: zoom-in;">
       <p id="texto-zoom" style="margin-top: 15px; font-size: 24px; font-weight: 800; color: #333;"></p>
 
-        <div style="display: flex; justify-content: center; gap: 12px; margin-top: 14px;">
-          <button onclick="mudarTamanhoFonte(-2)" aria-label="Diminuir fonte"
-            style="padding: 8px 18px; background: #eee; color: #333; border: 1px solid #ccc; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer;">
-            A-
-          </button>
-          <button onclick="mudarTamanhoFonte(2)" aria-label="Aumentar fonte"
-            style="padding: 8px 18px; background: #eee; color: #333; border: 1px solid #ccc; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer;">
-            A+
-          </button>
-        </div>
-
-        <p id="biografia-zoom"
-          style="margin-top: 14px; font-size: 14px; font-weight: 500; color: #444; line-height: 1.5; text-align: justify; padding: 0 5px; font-family: system-ui, sans-serif;">
-        </p>
-
-        <button id="btn-ouvir" onclick="lerBiografia()"
-          style="margin-top: 18px; margin-right: 10px; padding: 10px 22px; background: rgb(255, 153, 0); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer;">
-          Ouvir Texto
+      <div style="display: flex; justify-content: center; gap: 12px; margin-top: 14px;">
+        <button onclick="mudarTamanhoFonte(-2)" aria-label="Diminuir fonte"
+          style="padding: 8px 18px; background: #eee; color: #333; border: 1px solid #ccc; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer;">
+          A-
         </button>
-
-        <button onclick="fecharZoom()"
-          style="margin-top: 18px; padding: 10px 24px; background: rgb(167, 1, 26); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer;">
-          Fechar
+        <button onclick="mudarTamanhoFonte(2)" aria-label="Aumentar fonte"
+          style="padding: 8px 18px; background: #eee; color: #333; border: 1px solid #ccc; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer;">
+          A+
         </button>
+      </div>
+
+      <p id="biografia-zoom"
+        style="margin-top: 14px; font-size: 14px; font-weight: 500; color: #444; line-height: 1.5; text-align: justify; padding: 0 5px; font-family: system-ui, sans-serif;">
+      </p>
+
+      <button id="btn-ouvir" onclick="lerBiografia()"
+        style="margin-top: 18px; margin-right: 10px; padding: 10px 22px; background: rgb(255, 153, 0); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer;">
+        Ouvir Texto
+      </button>
+
+      <button onclick="fecharZoom()"
+        style="margin-top: 18px; padding: 10px 24px; background: rgb(167, 1, 26); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer;">
+        Fechar
+      </button>
     </div>
   </div>
+
+  <div id="lightbox-foto" onclick="fecharLightbox()"
+    style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.92); z-index: 20000; align-items: center; justify-content: center; padding: 20px; cursor: zoom-out;">
+    <img id="img-lightbox" src="" alt="Foto em Tela Cheia"
+      style="max-width: 90%; max-height: 85vh; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); object-fit: contain;">
+  </div>
+
 
   <script src="script.js"></script>
 
@@ -62,8 +72,9 @@
       const pessoa = dadosPersonalidades[id];
       const item = document.createElement("div");
       item.classList.add("acervo-item");
+
       item.innerHTML = `
-        <img src="${pessoa.carta}" alt="${pessoa.nome}">
+        <img src="${pessoa.foto}" alt="${pessoa.nome}">
         <span>${pessoa.nome}</span>
       `;
       item.onclick = () => abrirModalAcervo(id);
@@ -71,14 +82,23 @@
     });
 
     function abrirModalAcervo(id) {
+      const pessoa = dadosPersonalidades[id];
+
       if (modoLupaAtivo) {
-        const pessoa = dadosPersonalidades[id];
-        document.getElementById("img-zoom").src = pessoa.carta;
+        document.getElementById("img-zoom").src = pessoa.foto;
         document.getElementById("texto-zoom").textContent = pessoa.nome;
         document.getElementById("biografia-zoom").textContent = pessoa.bio;
         document.getElementById("modal-zoom").style.display = "flex";
+      } else {
+        document.getElementById("img-lightbox").src = pessoa.foto;
+        document.getElementById("lightbox-foto").style.display = "flex";
       }
     }
+
+    function fecharLightbox() {
+      document.getElementById("lightbox-foto").style.display = "none";
+    }
+
   </script>
 
 </body>

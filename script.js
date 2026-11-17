@@ -12,7 +12,7 @@ const dadosPersonalidades = {
     nome: "Adélia Domingues",
     carta: "./res/carta-1.png",
     foto: "./res/foto-1.png",
-    bio: "[incluir biografia]"
+    bio: "Adélia Domingues é uma artesã e escritora gaúcha nascida em 1935, natural de Pinheiro Machado/RS e residente em Florianópolis desde 1996. Interrompeu seus estudos aos 14 anos, para trabalhar em uma fazenda e voltou a estudar apenas aos 60 anos de idade, na modalidade EJA (Educação de Jovens e Adultos) oferecida por meio do programa NETI-UNAPI (Núcleo de Estudos da Terceira Idade - Universidade Aberta para Pessoas Idosas) da UFSC. Em 2025, lançou seu primeiro livro “Construída em Retalhos” onde conta um pouco de sua biografia e incentiva as pessoas a buscarem conhecimento sempre, independente da idade. Atualmente, Adélia ministra oficinas de fuxico, frequenta aulas de teatro e ginástica e tem uma banca na feira de artesanato da Lagoa da Conceição."
   },
   2: {
     nome: "Alexandra Alencar",
@@ -30,8 +30,8 @@ const dadosPersonalidades = {
     nome: "Ildefonso Juvenal",
     carta: "./res/carta-4.png",
     foto: "./res/foto-4.png",
-      bio: "[incluir biografia]"
-    },
+    bio: "Ildefonso Juvenal (1894-1965) foi um escritor, pesquisador, orador, militar e farmacêutico florianopolitano, primeiro homem negro a graduar-se em uma universidade em Santa Catarina, no curso de Farmácia, em 1924. Publicou obras de diversos gêneros literários, além de artigos para jornais e periódicos de Santa Catarina, Paraná, Rio Grande do Sul e São Paulo. Foi sócio do Instituto Histórico e Geográfico Catarinense; um dos fundadores do Centro Cívico e Recreativo José Boiteux, associação que lutava pela cidadania e contra a discriminação racial; membro correspondente do Centro de Letras do Paraná e da Academia Riograndense de Letras. A Lei 6.463, de 1984, instituiu a medalha de Mérito Intelectual 'Major Ildefonso Juvenal', para ser concedida ao 1º colocado no Curso de Aperfeiçoamento de Oficiais da Polícia Militar."
+  },
   5: {
     nome: "Luciana de Freitas Silveira",
     carta: "./res/carta-5.png",
@@ -42,7 +42,7 @@ const dadosPersonalidades = {
     nome: "Neide Mariarrosa",
     carta: "./res/carta-6.png",
     foto: "./res/foto-6.png",
-    bio: "[incluir biografia]"
+    bio: "Neide Maria Rosa (1936-1994), multiartista florianopolitana com destaque na MPB. Iniciou carreira musical aos 14 anos e interpretou diversos estilos. Seu repertório denuncia racismos, afirma a identidade negra e as vivências do morro. Na década de 60, manteve intenso contato com artistas de MPB, sendo premiada em festivais e cantando no Copacabana Palace (RJ). Primeira intérprete de “Rancho do Amor à Ilha”, oficializada como hino de Florianópolis. Gravou um único disco, “Eu Sou Assim”, em homenagem aos florianopolitanos. Faleceu em 1994, deixando um importante legado para a história da música catarinense. Em 2004, o G.R.E.S. Consulado escreveu um enredo exaltando sua trajetória. Em 2023, foi homenageada com a Medalha Cruz e Sousa, a maior honraria cultural de Santa Catarina."
   },
   7: {
     nome: "Neli Góes Ribeiro",
@@ -54,7 +54,7 @@ const dadosPersonalidades = {
     nome: "Trajano Margarida",
     carta: "./res/carta-8.png",
     foto: "./res/foto-8.png",
-    bio: "[incluir biografia]"
+    bio: "Trajano Margarida (1889–1946), nascido em Desterro (hoje Florianópolis), meses antes da Proclamação da República, foi poeta, músico, professor e uma das personalidades mais vibrantes da cultura catarinense. Neto de Geralda, uma mulher escravizada homenageada em seus versos, teve uma infância simples ao lado da mãe, a quem ajudava vendendo amendoim torrado pelas ruas da capital antes de ingressar no magistério e no serviço público. Durante as décadas de 1920 e 1930, sua voz marcante e seu violão embalaram as serestas boêmias e o carnaval de Florianópolis, onde organizou cordões e compôs marchinhas reunidas na obra Canções Carnavalescas (1930). Além de publicar cerca de noventa poemas e diversos livros independentes, dedicou-se à preservação das canções populares do estado com o projeto Trovas Catarinenses. \nAtivista engajado na luta contra a discriminação racial e pelos direitos civis da população negra, foi um dos fundadores do Centro Cívico e Recreativo José Boiteux (1920), instituição que presidiu por duas vezes. Sua intensa atuação social, cultural e esportiva também marcou a criação do Figueirense Futebol Clube (1921) e do Centro Catarinense de Letras (1925)."
   },
   9: {
     nome: "Willian Conceição",
@@ -275,7 +275,7 @@ document.addEventListener("keydown", function (evento) {
     const lightbox = document.getElementById("lightbox-foto");
     if (lightbox && lightbox.style.display === "flex") {
       fecharLightbox();
-      return; 
+      return;
     }
 
     const modal = document.getElementById("modal-zoom");

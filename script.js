@@ -18,13 +18,13 @@ const dadosPersonalidades = {
     nome: "Alexandra Alencar",
     carta: "./res/carta-2.png",
     foto: "./res/foto-2.png",
-    bio: "[incluir biografia]"
+    bio: "Alexandra Eliza Vieira Alencar, (Xanda Alencar), nascida em 20 de agosto de 1982, em Florianópolis, Santa Catarina é professora universitária, artista, dançarina,antropóloga, jornalista, Rainha do Maracatu Arrasta Ilha, batuqueira do Baque Mulher Floripa, mãe do Nagô e do Irê.  Graduou-se  em jornalismo em 2006 na UFSC, fez mestrado (2009), doutorado (2015) e pós-doutorado (2018-2020) em Antropologia Social na UFSC. É professora e Coordenadora do departamento de Antropologia e no Departamento de pós graduação em Antropologia na UFSC,  pesquisadora do Núcleo de Identidades e Relações Interétnicas da UFSC (NUER/UFSC) e do Núcleo de Identidades de Gênero e Subjetividades da UFSC (NIGS/UFSC). Coordenadora do Programa de ensino, pesquisa e extensão Ebó Epistêmico. Linha de pesquisa: Diáspora Africana e educação afro-brasileira. Em 2022 recebe o Prêmio Mulheres na Ciência - Edição Especial Cientistas Negras da UFSC na Categoria Plena. Em 2023 recebe a medalha Antonieta de Barros pela Câmara Municipal em Florianópolis."
   },
   3: {
     nome: "Enedina Alves Marques",
     carta: "./res/carta-3.png",
     foto: "./res/foto-3.png",
-    bio: "[incluir biografia]"
+    bio: "Nascida em Curitiba, Paraná, no dia 13/01/1913, faleceu em agosto de 1981. Era filha de escravizados libertos que viviam na periferia da capital paranaense no período pós-abolição. Foi professora e a primeira engenheira negra do Brasil, numa época que a univerisade não era pensada para mulheres e negros, e para além de esforço tido teve algumas oportunidades, pois fora matriculada em uma escola pelo empregador de sua mãe.Durante a sua trajetória, colaborou com obras significativas no Paraná como a Usina Capivari-Cachoeira, que é a maior central hidrelétrica subterrânea do sul do Brasil, e atualmente é chamada de Usina Governador Pedro Viriato Parigot de Souza, em Antonina, e o Colégio Estadual do Paraná, Casa do Estudante Universitário (CEU), situada ao lado do Colégio Estadual, uma das maiores residências estudantis da região Sul. Enedina Marques, serviu de exemplo para sua família e inspira mulheres e meninas até hoje, tanto que sua história inspirou a escritora  Lindamir Salete Casagrande a escrever o livro infantil: 'Enedina Marques: mulher negra, pioneira na engenharia brasileira'. O livro faz parte da série 'Meninas, Moças e Mulheres que Inspiram', publicada pela Editora Inverso. "
   },
   4: {
     nome: "Ildefonso Juvenal",
@@ -36,7 +36,7 @@ const dadosPersonalidades = {
     nome: "Luciana de Freitas Silveira",
     carta: "./res/carta-5.png",
     foto: "./res/foto-5.png",
-    bio: "[incluir biografia]"
+    bio: "Luciana de Freitas Silveira é gaúcha nascida em Rosário do Sul- RS, radicada em Florianópolis, Santa Catarina, há mais de 27 anos. Reside no  Maciço do Morro da Cruz, mãe de dois filhos e avó de três crianças. Graduada  em Licenciatura em Ciências Sociais na Universidade Federal de Santa Catarina - UFSC, possui mestrado em Educação PPGE também na UFSC. Filiada ao Partido dos Trabalhadores (PT), foi candidata a vereadora em 2020, militante do Direito à Cidade, a territorialidade e as questões das mulheres negras, quilombolas, periféricas e trans. É conhecida como 'Lupretafreiras' no Instagram, é integrante do  Movimento Negro Unificado de Santa Catarina, fundadora do grupo de mulheres intitulado Escutação, que busca a dialogar sobre as violências vividas pelas mulheres, membra do Grupo de Trabalho da Educação Quilombola de Santa Catarina. Pertence ao grupo de pesquisa Núcleo Infância, Comunicação, Cultura e Arte (PPGE/CED/CNPq). Em sua trajetória trabalhou como empregada doméstica ingressando na universidade aos 36 anos, onde  percebeu que seus sonhos eram possíveis, fez mestrado e atualmente é doutoranda."
   },
   6: {
     nome: "Neide Mariarrosa",
@@ -48,7 +48,7 @@ const dadosPersonalidades = {
     nome: "Neli Góes Ribeiro",
     carta: "./res/carta-7.png",
     foto: "./res/foto-7.png",
-    bio: "[incluir biografia]"
+    bio: "Professora Neli Góes Ribeiro (1942) é pedagoga, educadora e uma figura histórica do movimento negro em Santa Catarina. Nasceu em Florianópolis, filha de manezinhos, e foi nora do primeiro vereador negro da capital. Casou-se com o primeiro delegado negro do estado, e aos 30 anos, já mãe de dois filhos, decidiu retomar os estudos. Formou-se em Pedagogia pela UFSC e fez especialização na área. Tornou-se professora titular da UDESC, dedicando sua carreira aos fundamentos da educação, à história das populações negras e às relações raciais. Foi pioneira na instituição, sendo a primeira pró-reitora negra de Extensão da UDESC. Também foi uma das fundadoras do primeiro Núcleo de Estudos Afro-Brasileiros (NEAB) de Santa Catarina e do Brasil, um marco importante para a visibilidade e o ensino de temas relacionados à história negra. Na década de 1980, co-fundou a Associação de Mulheres Negras Antonieta de Barros, lutando contra a segregação racial na cidade e exigindo representatividade nos espaços públicos e no mercado de trabalho. "
   },
   8: {
     nome: "Trajano Margarida",
@@ -60,7 +60,7 @@ const dadosPersonalidades = {
     nome: "Willian Conceição",
     carta: "./res/carta-9.png",
     foto: "./res/foto-9.png",
-    bio: "[incluir biografia]"
+    bio: "Willian Luiz da Conceição nasceu em Joinville (SC). Ele transita entre a História e a Antropologia Social para investigar como as heranças coloniais moldam as desigualdades contemporâneas no Brasil e nas Américas. Com formação pela UDESC, UFSC e doutorado pelo Museu Nacional (UFRJ), ele atualmente se dedica, em seu pós-doutorado na USP, a reconstruir a biografia e as redes intelectuais, políticas e afetivas de Léon-Gontran Damas, uma figura central do movimento da Negritude. Ele é autor do livro Branquitude: dilema racial brasileiro (Papéis Selvagens, 2020). Sua pesquisa aborda relações raciais, memória, desigualdades em saúde e alimentação, além dos processos de assimilação e lutas anticoloniais na Guiana Francesa e no Caribe. Esses temas foram aprofundados em seus pós-doutorados. Além de professor do departamento de antropologia da UFSC, Willian participa de coletivos como NUER, NuCEC, Instituto Kadila e Ebó Epistêmico. Seu trabalho também dialoga com a história pública e os direitos humanos, marcado por sua experiência no acolhimento humanitário junto à Agência da ONU para as Migrações (OIM). "
   }
 };
 
